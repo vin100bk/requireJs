@@ -27,15 +27,19 @@ var require = {
      */
     get: function (name) {
         if (!(name in this.modulesLoaded)) {
-            $.ajax({
-                url: this.modules[name],
-                dataType: 'script',
-                async:false
-            })
-                .fail(function (jqxhr, settings, exception) {
-                    throw 'Error while loading ' + name + ' module !';
-                });
-            this.modulesLoaded[name] = 1;
+            if(name in this.modules) {
+                $.ajax({
+                    url: global.baseUrlAssets + '/assets/js/' + this.modules[name],
+                    dataType: 'script',
+                    async: false
+                })
+                    .fail(function (jqxhr, settings, exception) {
+                        throw 'Error while loading ' + name + ' module !';
+                    });
+                this.modulesLoaded[name] = 1;
+            } else {
+                throw 'The module ' + name + ' is not defined !';
+            }
         }
     }
 };
