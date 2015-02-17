@@ -21,3 +21,5 @@ require.init({
 ```js
 require.get('alias1');
 ```
+### Dependencies
+ - JQuery
