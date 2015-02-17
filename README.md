@@ -5,6 +5,8 @@ Lightweight and very simple JS require
 ### Init
 
 ```js
+<script src="pathtojs/require.js"></script>
+
 require.init({
     'alias1': 'path/file1.js',
     'alias2': 'path/file2.js',
