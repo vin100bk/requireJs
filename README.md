@@ -1,5 +1,5 @@
 # requireJs
-Lightweight JS require
+Lightweight and very simple JS require
 
 ## Examples of use :
 ### Init
