@@ -4,9 +4,11 @@ Lightweight and very simple JS require
 ## Examples of use :
 ### Init
 
-```js
+```html
 <script src="pathtojs/require.js"></script>
+```
 
+```js
 require.init({
     'alias1': 'path/file1.js',
     'alias2': 'path/file2.js',
