@@ -18,7 +18,7 @@ var require = {
      * @param config
      */
     init: function (config) {
-        this.modules = config;
+        this.modules = $.extend({}, this.modules, config);
     },
 
     /**
