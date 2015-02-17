@@ -28,7 +28,7 @@ var require = {
     get: function (name) {
         if (!(name in this.modulesLoaded)) {
             $.ajax({
-                url: global.baseUrlAssets + '/assets/js/' + this.modules[name],
+                url: this.modules[name],
                 dataType: 'script',
                 async:false
             })
