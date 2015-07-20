@@ -1,5 +1,5 @@
 # requireJs
-Lightweight and very simple JS require
+Lightweight and very simple JS require. This module use a synchronous way, it can affect your application performances
 
 ## Examples of use :
 ### Init
