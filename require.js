@@ -27,16 +27,16 @@ var require = {
      */
     get: function (name) {
         if (!(name in this.modulesLoaded)) {
-            if(name in this.modules) {
-                $.ajax({
+            if (name in this.modules) {
+                var promise = $.ajax({
                     url: this.modules[name],
-                    dataType: 'script',
-                    async: false
+                    dataType: 'script'
                 })
                     .fail(function (jqxhr, settings, exception) {
-                        throw 'Error while loading ' + name + ' module !';
+                        console.log('Error while loading ' + name + ' module !');
                     });
                 this.modulesLoaded[name] = 1;
+                return promise;
             } else {
                 throw 'The module ' + name + ' is not defined !';
             }
