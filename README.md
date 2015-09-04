@@ -19,7 +19,13 @@ require.init({
 
 ### Call
 ```js
-require.get('alias1');
+require.get('alias1').done(function() {
+	// Script loaded, we can use it
+})
+.fail(function() {
+	
+});
+
 ```
 ### Dependencies
  - JQuery
