@@ -25,7 +25,19 @@ require.get('alias1').done(function() {
 .fail(function() {
 	
 });
-
 ```
+
+You can use then() as well and enojy its chaining power:
+
+```js
+require.get('alias1').then(function() {
+	// Script loaded, we can use it
+	return $aValue;
+})
+.then(function($aValue) {
+	// You can use the value computed in the previous then statement 
+});
+```
+
 ### Dependencies
  - JQuery
