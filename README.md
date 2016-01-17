@@ -27,7 +27,7 @@ require.get('alias1').done(function() {
 });
 ```
 
-You can use then() as well and enojy its chaining power:
+You can use then() as well and enjoy its chaining power:
 
 ```js
 require.get('alias1').then(function() {
